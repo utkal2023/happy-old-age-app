@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Old Age</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background: #f5f7fa;
+        }
+
+        .container {
+            background: white;
+            width: 500px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        input {
+            padding: 12px;
+            width: 80%;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 30px;
+            font-size: 22px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🌍 Happy Old Age</h1>
+
+    <p>Enter your name and discover where you may live happily in your old age.</p>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+        >
+
+        <br>
+
+        <button type="submit">
+            Discover My Future
+        </button>
+
+    </form>
+
+    {% if country %}
+
+    <div class="result">
+        🎉 <strong>{{ name }}</strong>
+        <br><br>
+        Your happy old age destination is:
+        <br><br>
+        🌎 <strong>{{ country }}</strong>
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
